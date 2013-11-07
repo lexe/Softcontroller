@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftController", "SoftController\SoftController.csproj", "{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftController.BLL", "SoftController.BLL\SoftController.BLL.csproj", "{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftController.DAL", "SoftController.DAL\SoftController.DAL.csproj", "{3E5C1300-2AEB-490F-8188-0F4DD2AE0F3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5C1300-2AEB-490F-8188-0F4DD2AE0F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5C1300-2AEB-490F-8188-0F4DD2AE0F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5C1300-2AEB-490F-8188-0F4DD2AE0F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5C1300-2AEB-490F-8188-0F4DD2AE0F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{165CA8C5-403F-469D-B9D4-4C3E1567A3C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoftController</RootNamespace>
+    <AssemblyName>SoftController</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\GraphicsEngine.cs" />
+    <Compile Include="Controls\ColorButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LibraryTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LibraryTree.Designer.cs">
+      <DependentUpon>LibraryTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumericText.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\InputString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputString.Designer.cs">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LibraryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LibraryEditor.Designer.cs">
+      <DependentUpon>LibraryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Library\EditLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Library\EditLine.Designer.cs">
+      <DependentUpon>EditLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Library\EditUIElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Library\EditUIElement.Designer.cs">
+      <DependentUpon>EditUIElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectManager.Designer.cs">
+      <DependentUpon>ProjectManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\LibraryTree.resx">
+      <DependentUpon>LibraryTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputString.resx">
+      <DependentUpon>InputString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LibraryEditor.resx">
+      <DependentUpon>LibraryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Library\EditLine.resx">
+      <DependentUpon>EditLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Library\EditUIElement.resx">
+      <DependentUpon>EditUIElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectManager.resx">
+      <DependentUpon>ProjectManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SoftController.BLL\SoftController.BLL.csproj">
+      <Project>{42C914BA-4E0F-456A-9B83-C8A8FA3B14D9}</Project>
+      <Name>SoftController.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomin_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomout_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\line_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arc_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon_16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
