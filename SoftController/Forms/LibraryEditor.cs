@@ -162,28 +162,31 @@ namespace SoftController.Forms
 
             // snap to point
             _snapPointPosition = null;
-            double closestDistance = double.MaxValue, currentDistance, maxSnapDistance = _graphics.PixelToRealDistanceX(10); ;
-            foreach (LibraryUIElement element in oLibraryTree.SelectedItem.UIElements)
+            if (btnSnapToPoint.Checked)
             {
-                if (element is UILine)
+                double closestDistance = double.MaxValue, currentDistance, maxSnapDistance = _graphics.PixelToRealDistanceX(10); ;
+                foreach (LibraryUIElement element in oLibraryTree.SelectedItem.UIElements)
                 {
-                    currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).P1);
-                    if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
+                    if (element is UILine)
                     {
-                        if (btnSnapToPoint.Checked) _snapPointPosition = ((UILine)element).P1.Clone();
-                        closestDistance = currentDistance;
-                    }
-                    currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).P2);
-                    if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
-                    {
-                        if (btnSnapToPoint.Checked) _snapPointPosition = ((UILine)element).P2.Clone();
-                        closestDistance = currentDistance;
-                    }
-                    currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).M);
-                    if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
-                    {
-                        if (btnSnapToPoint.Checked) _snapPointPosition = ((UILine)element).M.Clone();
-                        closestDistance = currentDistance;
+                        currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).P1);
+                        if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
+                        {
+                            _snapPointPosition = ((UILine)element).P1.Clone();
+                            closestDistance = currentDistance;
+                        }
+                        currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).P2);
+                        if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
+                        {
+                            _snapPointPosition = ((UILine)element).P1.Clone();
+                            closestDistance = currentDistance;
+                        }
+                        currentDistance = _graphics.GetRealDistance(_mousePosition, ((UILine)element).M);
+                        if (currentDistance < maxSnapDistance && currentDistance < closestDistance)
+                        {
+                            _snapPointPosition = ((UILine)element).P1.Clone();
+                            closestDistance = currentDistance;
+                        }
                     }
                 }
             }
